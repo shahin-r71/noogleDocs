@@ -8,7 +8,7 @@ const Header = ({children}:HeaderProps) => {
     <header className="header">
       <Link href="./" className="flex items-center justify-center gap-2">
         <Image
-          src="assets/icons/noogleDocs_Logo.svg"
+          src="/assets/icons/noogleDocs_Logo.svg"
           alt="logo"
           width={34}
           height={34}
