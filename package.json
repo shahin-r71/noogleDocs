@@ -25,6 +25,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.13.3",
     "jsm-editor": "^0.0.12",
     "lexical": "^0.16.1",
     "lucide-react": "^0.439.0",
@@ -32,13 +33,14 @@
     "next": "^14.2.16",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.5.2",
+    "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/tailwindcss": "^3.0.11",
     "eslint": "^8",
     "eslint-config-next": "14.2.8",
     "postcss": "^8",

@@ -94,3 +94,19 @@ export function getUserColor(userId: string) {
   const colorIndex = sum % brightColors.length;
   return brightColors[colorIndex];
 }
+
+
+export function flattenColors(colors: Record<string, any>, prefix = ''): Record<string, string> {
+  const flattened: Record<string, string> = {};
+
+  for (const key in colors) {
+    const value = colors[key];
+    if (typeof value === 'string') {
+      flattened[`${prefix}${key}`] = value;
+    } else if (typeof value === 'object') {
+      Object.assign(flattened, flattenColors(value, `${prefix}${key}-`));
+    }
+  }
+
+  return flattened;
+}

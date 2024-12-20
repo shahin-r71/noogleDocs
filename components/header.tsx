@@ -17,20 +17,7 @@ const Header = ({children}:HeaderProps) => {
         <p className="text-3xl font-bold hidden md:block text-blue-300">
           NoogleDocs
         </p>
-        {/* <Image 
-          src="/assets/icons/logo.svg"
-          alt="logo"
-          width={120}
-          height={32}
-          className='hidden md:block'
-        />
-        <Image 
-          src="/assets/icons/logo-icon.svg"
-          alt="logo"
-          width={32}
-          height={32}
-          className='md:hidden mr-2'
-        /> */}
+        
       </Link>
 
       {children}

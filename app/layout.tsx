@@ -32,20 +32,19 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider
-      appearance={
-        { baseTheme: [dark],
-          variables: {
-            colorPrimary: '#3371FF',
-            fontSize: '16px',
-          }
-       }}>
+      appearance={{
+        baseTheme: [dark],
+        variables: {
+          colorPrimary: "#3371FF",
+          fontSize: "16px",
+        },
+      }}
+    >
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased custom-scrollbar`}
         >
-          <Provider>
-            {children}
-          </Provider>
+          <Provider>{children}</Provider>
         </body>
       </html>
     </ClerkProvider>
