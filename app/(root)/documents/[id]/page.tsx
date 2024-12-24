@@ -1,9 +1,6 @@
-
-
 import CollaborativeRoom from "@/components/CollaborativeRoom";
 import { getDocument } from "@/lib/actions/room.actions";
 import { getClerkUsers } from "@/lib/actions/user.actions";
-// import { liveblocks } from "@/lib/liveblocks";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
@@ -19,17 +16,20 @@ export default async function Page({params:{id}}:SearchParamProps) {
   }
 
   )
-  // console.log(document)
+ 
   const currentUserType = document.usersAccesses[clerkUser.emailAddresses[0].emailAddress].includes("room:write")?"editor":"viewer";
   const userIds=Object.keys(document.usersAccesses);
   
   const users=await getClerkUsers({userIds});
-  const usersData:User[]=users!.map((user:User)=>({
-    ...user,
-    userType:document.usersAccesses[user.email].includes("room:write")?"editor":"viewer",
-  }))
+  const usersData:User[]=users!.map((user:User)=>{
+    return {
+      ...user,
+      userType: document.usersAccesses[user.email].includes("room:write")
+        ? "editor"
+        : "viewer",
+    };
+  })
 
-  // console.log(usersData)
   return (
     <div className="home-container relative">
       <CollaborativeRoom 

@@ -36,23 +36,7 @@
 }
 
 @layer utilities {
-  /* floating toolbar */
-
-  /* .toolbar {
-  padding: 8px;
-  border-bottom: 1px solid #E6E6E7;
-  }
-
-  .toolbar > button {
-    all: unset;
-    font-weight: 500;
-    padding: 8px;
-    border-radius: 6px;
-  }
-
-  .toolbar > button:hover {
-    background: #F4F4F5;
-  } */
+  
   .text-28-semibold {
     @apply text-[28px] font-semibold;
   }
