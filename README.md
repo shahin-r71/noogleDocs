@@ -61,5 +61,5 @@ A collaborative document editing web application inspired by Google Docs. With N
 
 5. Open the app in your browser at [http://localhost:3000](http://localhost:3000).
 
-##Contributing
+## Contributing
 
